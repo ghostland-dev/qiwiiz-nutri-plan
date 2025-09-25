@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Heart, Shield, Users } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,12 +42,16 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="medical-transition">
-              Connexion
-            </Button>
-            <Button className="bg-gradient-primary hover:bg-primary-hover medical-transition">
-              Essai Gratuit
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" className="medical-transition">
+                Connexion
+              </Button>
+            </Link>
+            <Link to="/medical-profile">
+              <Button className="bg-gradient-primary hover:bg-primary-hover medical-transition">
+                Essai Gratuit
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -79,12 +84,16 @@ const Navigation = () => {
                 Tarifs
               </a>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="ghost" className="justify-start">
-                  Connexion
-                </Button>
-                <Button className="bg-gradient-primary justify-start">
-                  Essai Gratuit
-                </Button>
+                <Link to="/login">
+                  <Button variant="ghost" className="justify-start w-full">
+                    Connexion
+                  </Button>
+                </Link>
+                <Link to="/medical-profile">
+                  <Button className="bg-gradient-primary justify-start w-full">
+                    Essai Gratuit
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

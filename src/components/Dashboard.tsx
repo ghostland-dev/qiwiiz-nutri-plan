@@ -12,6 +12,7 @@ import {
   CheckCircle,
   AlertTriangle
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -213,9 +214,11 @@ const Dashboard = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button size="lg" className="bg-gradient-primary hover:bg-primary-hover medical-transition">
-            Accéder à Mon Dashboard
-          </Button>
+          <Link to="/dashboard">
+            <Button size="lg" className="bg-gradient-primary hover:bg-primary-hover medical-transition">
+              Accéder à Mon Dashboard
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

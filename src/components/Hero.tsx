@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Shield, Heart, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-nutrition.jpg";
 
 const Hero = () => {
@@ -50,21 +51,25 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg medical-transition group"
-              >
-                Commencer l'Essai Gratuit
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 medical-transition" />
-              </Button>
+              <Link to="/medical-profile">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg medical-transition group"
+                >
+                  Commencer l'Essai Gratuit
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 medical-transition" />
+                </Button>
+              </Link>
               
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg medical-transition"
-              >
-                Découvrir la Démo
-              </Button>
+              <Link to="/dashboard">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg medical-transition"
+                >
+                  Découvrir la Démo
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
