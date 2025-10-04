@@ -25,18 +25,21 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#fonctionnalites" className="text-muted-foreground hover:text-primary medical-transition">
-                Fonctionnalités
-              </a>
-              <a href="#dashboard" className="text-muted-foreground hover:text-primary medical-transition">
+              <Link to="/" className="text-muted-foreground hover:text-primary medical-transition">
+                Accueil
+              </Link>
+              <Link to="/dashboard" className="text-muted-foreground hover:text-primary medical-transition">
                 Dashboard
-              </a>
-              <a href="#professionnels" className="text-muted-foreground hover:text-primary medical-transition">
-                Professionnels
-              </a>
-              <a href="#tarifs" className="text-muted-foreground hover:text-primary medical-transition">
-                Tarifs
-              </a>
+              </Link>
+              <Link to="/meal-planning" className="text-muted-foreground hover:text-primary medical-transition">
+                Planification
+              </Link>
+              <Link to="/shopping-list" className="text-muted-foreground hover:text-primary medical-transition">
+                Courses
+              </Link>
+              <Link to="/reports" className="text-muted-foreground hover:text-primary medical-transition">
+                Rapports
+              </Link>
             </div>
           </div>
 
@@ -71,18 +74,21 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
-              <a href="#fonctionnalites" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
-                Fonctionnalités
-              </a>
-              <a href="#dashboard" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
+              <Link to="/" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
+                Accueil
+              </Link>
+              <Link to="/dashboard" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
                 Dashboard
-              </a>
-              <a href="#professionnels" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
-                Professionnels
-              </a>
-              <a href="#tarifs" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
-                Tarifs
-              </a>
+              </Link>
+              <Link to="/meal-planning" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
+                Planification
+              </Link>
+              <Link to="/shopping-list" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
+                Courses
+              </Link>
+              <Link to="/reports" className="block px-3 py-2 text-muted-foreground hover:text-primary medical-transition">
+                Rapports
+              </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Link to="/login">
                   <Button variant="ghost" className="justify-start w-full">
